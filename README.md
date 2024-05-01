@@ -1,5 +1,7 @@
-w# Flower_Classification
 
-In this project, we will analyze the effects of different augmentations on flower images for CNN models.
-We will then analyze the case in which multiple augmentations are applied.
-The experiments show that for a set of good augmentations, there exists an ordering such that the combination performs better than individually.
+Flower Recognition Using Grayscale Transformations and the Hunt for Good Augmentation Ordering
+
+In this project, we analyzed the effects of different augmentations on flower images for CNN models. Flower images were provided to us in RGB format, and the goal was to apply augmentations to their grayscale versions and make our model competitive with models trained on the RGB version of the flowers. One motivation here is to reduce training costs while ensuring that our model performs well (compared to RGB models). We then analyzed cases in which multiple augmentations were applied. We conducted these experiments on a few designed CNN models and, in some cases, on pretrained models with augmentations and fine-tuning. The experiments revealed that for a set of good augmentations, there exists an ordering that enables the combination to outperform individual ones. This observation prompted us to attempt uncovering how to identify the optimal ordering a priori or, at least, by training on a small number of epochs and deciding early. One problem-solving strategy we adopted was early detection, where we tried a few good orderings and decided early in the training which ordering appeared promising. It's important to note that while this method may work in some cases, its success could heavily depend on the continuous function we are trying to approximate using our CNN model. In general, the problem of finding the perfect ordering through a few experiments on the function we sampled from seems to be very challenging.
+
+
+
